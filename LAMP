@@ -1,0 +1,33 @@
+LAMP is an archetypal model of web service stacks, named as an acronym of the names of its original four open-source components: 
+- Linux operating system, 
+- Apache HTTP Server, 
+- MySQL relational database management system, 
+- PHP programming language.
+
+
+1. Install Apache
+To install Apache you must install the Metapackage apache2. This can be done by searching for and installing in the Software Centre, or by running the following command.
+
+sudo apt install apache2
+
+2. Install MySQL
+To install MySQL you must install the Metapackage mysql-server. This can be done by searching for and installing in the Software Centre, or by running the following command.
+
+sudo apt install mysql-server
+
+3. Install PHP
+PHP requires a few packages to work as you expect, so we recommend the following command.
+
+sudo apt install php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
+
+4. Restart Server
+Your server should restart Apache automatically after the installation of both MySQL and PHP. If it doesn't, execute this command.
+
+sudo service apache2 restart
+
+5. Check Apache
+Open a web browser and navigate to http://localhost/. You should see a message saying It works!
+
+6. Check PHP
+You can check your PHP by executing any PHP file from within /var/www/. Alternatively you can execute the following command, which will make PHP run the code without the need for creating a file .
+php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
